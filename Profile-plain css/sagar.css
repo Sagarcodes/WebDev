@@ -1,0 +1,127 @@
+#head {
+	display: block;
+	width: 100%;
+	height: 250px;
+	position: absolute;
+	/*background-color: rgb(200,200,200);*/
+	background-image: url("headbg.jpg");
+	font-family: "Lucida Console","Sans Serif";
+	font-size: 30px;
+	color: white;
+	transform: translate(-8px,-8px);
+}
+#head h1{
+	font-family: "Lucida Console","Courier New","Sans Serif";
+	transform: translate(350px,100px);
+	font-size: 70px;
+	color: rgb(30,30,70); 
+	text-shadow: 6px 6px 2px grey;
+
+}
+.container {
+  position: relative;
+  width: 300px;
+  transform: translate(8px,100px);
+}
+
+.image {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+#basic{
+	display: inline-block;
+	max-width:898px;
+	height: 150px; 
+	position: absolute;
+	transform: translate(354px,-200px);
+	
+	padding: 20px;
+	background: rgb(125,0,255);
+}
+#academic{
+	display: inline-block;
+	max-width: 998px;
+	height: 200px;
+	position: absolute;
+	padding: 10px;
+	background: rgb(50,100,150);
+	transform: translate(354px,50px);
+}
+#academic table {
+    border-collapse: collapse;
+    width: 919px;
+    color: black;
+    font-size: 25px;
+}
+
+#academic th, td {
+    text-align: left;
+    padding: 2px;
+}
+
+#academic tr:nth-child(even){background-color: rgb(200,200,200);}
+#academic tr:nth-child(odd){background-color: rgb(255,255,255);}
+
+#academic th {
+    background-color: #4CAF50;
+    color: white;
+}
+#hobbies{
+	display: inline-block;
+	max-width:100%;
+	height: 400px; 
+	position: absolute;
+	padding: 20px;
+	transform: translate(15px,300px);
+	background: rgb(125,0,255);
+}
+#hobbies img{
+	transform: translate(0,20px);
+	height: 300px;
+	width: 300px;
+}
+#hobbies #hobbietext{
+	margin: 30px;
+}
+#contact{
+	display: inline-block;
+	max-width:450px;
+	height: 100px; 
+	position: absolute;
+	padding: 10px;
+	transform: translate(15px,100px);
+}
+#contact img{
+	height: 65px;
+	width: 62px;
+}
