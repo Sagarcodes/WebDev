@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<script type="text/javascript" src="todo.js"></script>
+	<style type="text/css">		
+	.remove {
+  	color: #d9534f;
+	}
+
+	.icn-move {
+  	color: #0275d8;
+	}
+
+	#list > li:first-child > .fa-chevron-up {
+  	visibility: hidden;
+  	pointer-events: none;
+	}
+
+	#list > li:last-child > .fa-chevron-down {
+	visibility: hidden;
+  	pointer-events: none;
+	}
+
+	.todo-done{
+		text-decoration: line-through;;
+		color: grey;
+	}
+
+
+	</style>
+	<title>TODO</title>
+</head>
+<body>
+<div class="row-header">
+	<h1 align="center">TODO LIST</h1>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-12 input-group">
+			<input type="text" class="form-control" placeholder="TODO" id="task">
+			<span class="input-group-btn">
+       			<button class="btn btn-secondary" type="button" id="addToDo"><i class="fa fa-plus"></i></button>
+      		</span>
+			<span class="input-group-btn">
+       			<button class="btn btn-danger" type="button" id="clearToDo"><i class="fa fa-trash"></i></button>
+      		</span>      		
+		</div>	
+	</div>
+	<div class="row" id="todolist-container">
+		<div class="col-12">
+			<ul class="list-group" id="list">
+				
+			</ul>	
+		</div>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>
