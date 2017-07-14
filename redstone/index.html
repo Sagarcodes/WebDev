@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Redstone</title>
+	<link rel="icon" href="penguin1.png">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<style type="text/css">
+		#profileimg{
+			border-radius: 50pc;
+		}
+		.sidebar p{
+			color: white;
+		}
+		.sidebar {
+		  position: fixed;
+		  top: 51px;
+		  bottom: 0;
+		  left: 0;
+		  z-index: 1000;
+		  padding: 20px;
+		  overflow-x: hidden;
+		  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+		  border-right: 1px solid #eee;
+		}
+		.contentblock{
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+		.contentsubblock::after {
+		    content: "";
+		    clear: both;
+		    display: table;
+		}
+		.contentblock{
+			/*color: white;
+		    background-color: rgb(50,50,50);*/
+		}
+		.contentimg {
+		    float: left;
+		    margin: 10px 10px 10px 0px;
+		}
+		.imgblock img{
+			float: right;
+		}
+		.imgblock::after {
+		    content: "";
+		    clear: both;
+		    display: table;
+		}
+		.imgblock p{
+			clear:left;
+		}
+
+	</style>
+</head>
+<body>
+	
+<nav class="navbar navbar-toggleable navbar-inverse sticky-top bg-inverse">
+
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarcontent"><span class="navbar-toggler-icon"></span></button>
+<a href="#" class="navbar-brand"><img src="penguin1.png" class="d-inline-block align-top" height="30" width="70">blog.it</a>
+
+<div class="collapse navbar-collapse" id="navbarcontent" >
+	<div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="dashboardtemplate.html">Stats</a>
+      <a class="nav-item nav-link disabled" href="#">Logout</a>
+    </div>
+</div>
+</nav>
+
+<div class="container-fluid">
+	<div class="row">
+		<nav class="col-sm-3 col-md-2 hidden-xs-down bg-inverse sidebar">
+			<ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <img id="profileimg" src="sagar.jpg" class="img-fluid">
+              <p class="text-center"><br><a href="http://sagarsingh.bitballoon.com">Sagar</a></p>
+              <p class="text-center">@sagarsingh.cs1996</p>
+              <blockquote><p class="text-center" style="color: orange">&quot;My code never has bugs, it just develops random unexpected features.&quot;
+              </p>
+              <footer style="color:grey;text-align: right;">-Someone</footer>
+              </blockquote>
+            </li>
+            <li class="nav-item">
+              
+            </li>
+          </ul>
+		</nav>
+		<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+		<section class="row text-center">
+			<div class="col-8 input-group">
+				<input type="text" class="form-control" placeholder="ask a question or add a topic" id="inputquery">
+				<span class="input-group-btn">
+       				<button class="btn btn-secondary" type="button" id="add"><i class="fa fa-plus"></i></button>
+      			</span>
+			</div>
+			<div class="col-1"></div>
+			<div class="col-1">
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#textinput" data-placement="top" title="add article">
+  			<img src="plus.png" class="img-fluid" height="30" width="30">
+			</button>
+			<!-- Modal -->
+				<div class="modal fade" id="textinput" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="inputtitle">Add Article</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				       <input type="text" name="imagesrc" id="imagesrc" class="form-control" placeholder="Enter image source">
+				       <input type="text" name="Heading" class="form-control" id="heading" placeholder="Enter Heading">
+				       <textarea  rows="12" class="form-control" id="article" placeholder="Enter article text"></textarea>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-primary" id="post">Post</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</section>
+		<br>
+		<section class="row">
+			<div class="col-10">
+					<!-- Nav tabs -->
+				<ul class="nav nav-tabs justify-content-center" role="tablist">
+					  <li class="nav-item">
+					    <a class="nav-link active" data-toggle="tab" href="#feed" role="tab">feed</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" data-toggle="tab" href="#discussions" role="tab">discussions</a>
+					  </li>
+					  <!-- <li class="nav-item">
+					    <a class="nav-link" data-toggle="tab" href="#gallery" role="tab">gallery</a>
+					  </li>					  
+					  <li class="nav-item">
+					    <a class="nav-link" data-toggle="tab" href="#unanswered" role="tab">unanswered</a>
+					  </li> -->
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+				  <div class="tab-pane active" id="feed" role="tabpanel"></div>
+				  <div class="tab-pane" id="discussions" role="tabpanel"></div>
+				  <!-- <div class="tab-pane" id="gallery" role="tabpanel"></div>
+				  <div class="tab-pane" id="unanswered" role="tabpanel"></div> -->
+				</div>
+			</div>
+		</section>
+		</main>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/tether.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="redstone.js"></script>
+<script type="text/javascript" src="discussion.js"></script>
+</body>
+</html>
+
